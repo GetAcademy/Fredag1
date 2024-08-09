@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #stairs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);            
+            gap: 1px;
+        }
+
+        div.step {
+            outline: 1px solid;
+            height: 60px;                        
+        }
+        span.person{
+            font-size: 240%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stairs">
+    </div>
+    
+    <script>
+        showPersonOnGround();
+        function showPersonOnGround(){
+            document.getElementById('stairs').innerHTML = /*HTML*/`            
+                <!-- Nullte rad -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+
+                <!-- Første rad -->
+                <div></div>
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+                <div class="step"></div>
+
+                <!-- Andre rad -->
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+                <div class="step"></div>
+                <div class="step"></div>
+
+                <!-- Tredje rad -->
+                <div><span class="person">😄</span></div>
+                <div class="step"></div>
+                <div class="step"></div>
+                <div class="step"></div>  
+                
+                <button onclick="showPersonOn1stStep()">neste</button>
+            `;
+        }
+
+        function showPersonOn1stStep(){
+            document.getElementById('stairs').innerHTML = /*HTML*/`            
+                <!-- Nullte rad -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+
+                <!-- Første rad -->
+                <div></div>
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+                <div class="step"></div>
+
+                <!-- Andre rad -->
+                <div></div>
+                <div>
+                    <span class="person">😄</span>
+                </div>
+                <div class="step"></div>
+                <div class="step"></div>
+
+                <!-- Tredje rad -->
+                <div></div>
+                <div class="step"></div>
+                <div class="step"></div>
+                <div class="step"></div>   
+                
+                <button onclick="showPersonOn2ndStep()">neste</button>
+            `;
+        }
+
+        function showPersonOn2ndStep(){
+            document.getElementById('stairs').innerHTML = /*HTML*/`            
+                <!-- Nullte rad -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <!-- <span class="person">😄</span> -->
+                </div>
+
+                <!-- Første rad -->
+                <div></div>
+                <div></div>
+                <div>
+                    <span class="person">😄</span>
+                </div>
+                <div class="step"></div>
+
+                <!-- Andre rad -->
+                <div></div>
+                <div>
+                    
+                </div>
+                <div class="step"></div>
+                <div class="step"></div>
+
+                <!-- Tredje rad -->
+                <div></div>
+                <div class="step"></div>
+                <div class="step"></div>
+                <div class="step"></div>   
+                
+                <button onclick="showPersonOn2ndStep()">neste</button>
+            `;
+        }
+    </script>
+</body>
+
+</html>
